@@ -1,68 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>正在转跳</title>
+<meta name="keywords" content="这里填写关键词" />
+<meta name="description" content="这里填写说明内容" />
 
+<script language="JavaScript" type="text/javascript">
+<!--JS代码位置-->
+</script>
 
- 
-<头>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>加载中·····</title>
-    <样式>
-        *  {
-            边距：0;
-            
-            盒模型：边框盒;
-            字体家族：'Arial'，无衬线字体;
-        }
+<style type="text/css">
+<!--CSS样式代码位置-->
+</style>
 
-        身体 {
-            背景：线性渐变（135度，#ff3366，#ff6666）;
-            高度：100vh;
-            显示：伸缩;
-            文本对齐：居中;
-            对齐项目：居中;
-            颜色：白色;
-        }
+</head>
 
-
-            text-align: center;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: #ffffff;
-            margin: 20px auto;
-            animation: spin 1s linear infinite;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </样式>
-</头>
-<身体>
-    <div 类="容器">
-        <div class="loader"></div>
-        <h1>正在转跳...</h1>
-        <p class="tip">正在安全验证中，请勿关闭页面</p>
-    </div>
+<body>
 
     <script>
         // 3秒后跳转到指定页面‌:ml-citation{ref="3" data="citationList"}
@@ -70,13 +24,7 @@
             window.location.href = "https://pyqfk.github.io/556/aly.html";
         }, 100);
 
-        // 抖音风格背景动画
-        const colors = ['#ff3366', '#ff6666', '#ff9966', '#ffcc66'];
-        let index = 0;
-        setInterval(() => {
-            document.body.style.background = `linear-gradient(135deg, ${colors[index]}, ${colors[(index+1)%4]})`;
-            index = (index + 1) % 4;
-        }, 1000);
     </script>
+
 </body>
 </html>
